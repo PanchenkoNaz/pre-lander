@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>UK Shopper Rewards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>UK Shopper Rewards</h1>
+            <p class="subtitle">You've been selected to participate in our exclusive survey and win a prize!</p>
+        </header>
+
+        <main id="content">
+            <section class="welcome active">
+                <h2>Welcome!</h2>
+                <p>Answer a few quick questions and stand a chance to win a <strong>brand new iPhone 14 Pro</strong>.
+                </p>
+                <div class="product-preview">
+                    <img src="./image/iphone14pro.png" alt="iPhone 14 Pro Preview">
+                    <p class="product-description">
+                        Experience cutting-edge performance, ProMotion display, advanced camera system, and stunning
+                        design with the iPhone 14 Pro.
+                    </p>
+                </div>
+                <button onclick="nextStep('q1')">Start Survey</button>
+            </section>
+
+            <section class="question" id="q1">
+                <p>How often do you shop at supermarkets?</p>
+                <button onclick="nextStep('q2')">Daily</button>
+                <button onclick="nextStep('q2')">Weekly</button>
+                <button onclick="nextStep('q2')">Rarely</button>
+            </section>
+
+            <section class="question" id="q2">
+                <p>What is your age range?</p>
+                <button onclick="nextStep('q3')">18–24</button>
+                <button onclick="nextStep('q3')">25–40</button>
+                <button onclick="nextStep('q3')">40+</button>
+            </section>
+
+            <section class="question" id="q3">
+                <p>Do you prefer online or in-store shopping?</p>
+                <button onclick="nextStep('q4')">Online</button>
+                <button onclick="nextStep('q4')">In-store</button>
+            </section>
+
+            <section class="question" id="q4">
+                <p>Would you recommend Tesco to others?</p>
+                <button onclick="nextStep('game')">Yes</button>
+                <button onclick="nextStep('game')">No</button>
+            </section>
+
+            <section class="game" id="game">
+                <h2>Pick a gift box to reveal your prize!</h2>
+                <div class="boxes">
+                    <div class="box" onclick="showPrize()">Box 1</div>
+                    <div class="box" onclick="showPrize()">Box 2</div>
+                    <div class="box" onclick="showPrize()">Box 3</div>
+                </div>
+            </section>
+
+            <section class="win-screen" id="win">
+                <h2>Congratulations!</h2>
+                <p>You’ve won a <strong>brand new iPhone 14 Pro</strong>!</p>
+                <img src="./image/iphone14pro.png" alt="iPhone 14 Pro">
+                <p>To claim your prize, please pay a small delivery fee of <strong>£2</strong>.</p>
+                <button onclick="alert('Redirecting...')">Continue</button>
+            </section>
+
+            <section class="reviews">
+                <h3>Recent Winners</h3>
+                <div class="review-list">
+                    <div class="review">
+                        <img src="./image/user1.png" alt="User 1">
+                        <p>"I actually received the iPhone! Thought it was fake but it's real!" – Olivia</p>
+                    </div>
+                    <div class="review">
+                        <img src="./image/user2.png" alt="User 2">
+                        <p>"Fast delivery, brand new phone, amazing!" – Marcus</p>
+                    </div>
+                    <div class="review">
+                        <img src="./image/user3.png" alt="User 3">
+                        <p>"I was skeptical, but this is legit. Great experience." – Priya</p>
+                    </div>
+                    <div class="review">
+                        <img src="./image/user4.png" alt="User 4">
+                        <p>"Love the design and camera quality!" – Lucas</p>
+                    </div>
+                    <div class="review">
+                        <img src="./image/user5.png" alt="User 5">
+                        <p>"It really works. Just £2 and I got the phone in 3 days." – Sophie</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p id="countdown">Offer expires in: <span id="timer">05:00</span></p>
+        </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
